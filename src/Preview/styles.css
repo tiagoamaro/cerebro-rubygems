@@ -1,0 +1,16 @@
+.rubygems--item {
+    height: auto;
+    flex-flow: row wrap;
+    padding: 5px 0 5px 5px;
+}
+
+.rubygems--item--title {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.rubygems--item--excerpt {
+    width: 100%;
+    font-size: 0.625em;
+    padding-bottom: 5px;
+}

@@ -1,7 +1,10 @@
 'use strict';
 
+import React from 'react'
+import Preview from 'Preview'
+
 const ICON_FILE      = require('./icon.png');
-const RUBYGEMS_REGEX = /rubygems\s+(.*)/i;
+const RUBYGEMS_REGEX = /rubygems\s+(.+)/i;
 
 const plugin = ({term, display, actions}) => {
   if (RUBYGEMS_REGEX.test(term)) {
@@ -16,13 +19,13 @@ const plugin = ({term, display, actions}) => {
       openBrowser(url);
     };
 
-    let [, RubygemsQuery] = RUBYGEMS_REGEX.exec(term);
+    let [, rubygemsQuery] = RUBYGEMS_REGEX.exec(term);
 
     display({
-      icon:     ICON_FILE,
-      title:    `Search Rubygems for ${RubygemsQuery}`,
-      onSelect: () => searchRubygems(RubygemsQuery),
-//      getPreview: () => <Preview query={RubygemsQuery} key={RubygemsQuery} openBrowser={openBrowser}/>
+      icon:       ICON_FILE,
+      title:      `Search Rubygems for ${rubygemsQuery}`,
+      onSelect:   () => searchRubygems(rubygemsQuery),
+      getPreview: () => <Preview query={rubygemsQuery} key={rubygemsQuery} openBrowser={openBrowser}/>
     })
   }
 };
