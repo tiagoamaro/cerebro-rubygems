@@ -31,8 +31,8 @@ export default class Preview extends Component {
                   tagName={'li'}
                   onSelect={() => openBrowserFn(s.url)}
                 >
-                  <div className={previewStyle['rubygems--item--title']}>{s.name} ({s.version})</div>
-                  <div className={previewStyle['rubygems--item--excerpt']}>{s.info}</div>
+                  <span className={previewStyle['rubygems--item--title']}>{s.name} ({s.version})</span>
+                  <span className={previewStyle['rubygems--item--excerpt']}>{s.info}</span>
                 </KeyboardNavItem>
               ))
             }
