@@ -1,6 +1,6 @@
 {
   "name": "cerebro-rubygems",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "",
   "license": "MIT",
   "repository": "tiagoamaro/cerebro-rubygems",
@@ -37,5 +37,8 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.27"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
